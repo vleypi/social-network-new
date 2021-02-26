@@ -12,15 +12,14 @@ import Music from './Components/Music/Music';
 import FriendList from './Components/Friend/friendList'
 
 function App(props) {
-  console.log(props)
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
         <Menu />
         <div className='content'>
-          <Route exact path="/" render={() => <Profile name="Vladimir Parfenov" status="Hello World!" postData={props.state.postData}/>} />
-          <Route path="/profile" render={() => <Profile name="Vladimir Parfenov" status="Hello World!" postData={props.state.postData}/>} />
+          <Route exact path="/" render={() => <Profile name="Vladimir Parfenov" status="Hello World!" postData={props.state.postData} postText={props.state.postText}/>} />
+          <Route path="/profile" render={() => <Profile name="Vladimir Parfenov" status="Hello World!" postData={props.state.postData} postText={props.state.postText}/>} />
           <Route path="/message" render={() => <Message messageData={props.state.messageData} friendsData={props.state.friendsData}/>} />
           <Route path="/friend" render={()=> <FriendList friendsData={props.state.friendsData}/>} />
           <Route path="/users" render={() => <Users />} />

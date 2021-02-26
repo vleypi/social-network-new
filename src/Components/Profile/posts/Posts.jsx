@@ -5,11 +5,15 @@ function Posts(props){
   let ref = React.createRef();
   const addPost = ()=> {
     props.addPost(ref.current.value)
+    ref.current.value = '';
+  }
+  const onPostChange = ()=>{
+    props.onPostChange(ref.current.value);
   }
   return(
       <div className="posts">
         <div className="new-post">
-          <textarea ref={ref} for="post" name="" id="" cols="30" rows="10" placeholder="Расскажите что-нибудь..."></textarea>
+          <textarea ref={ref} value={props.postText} onChange={onPostChange} name="" id="" cols="30" rows="10" placeholder="Расскажите что-нибудь..." />
           <button onClick={addPost}>Опубликовать</button>
         </div>
         {props.postData.map((el)=>(
