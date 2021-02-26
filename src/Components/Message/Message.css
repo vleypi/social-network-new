@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+
+.message{
+    display: flex;
+    height: 85vh;
+}
+
+.freinds{
+    width: 40%;
+}
+
+.freinds ul{
+    list-style: none;
+}
+
+.freinds ul li{
+    height: 70px;
+    background:white;
+    margin-top: 4px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.freinds ul li:active{
+    background-color: #eeddee;
+}
+
+.freinds ul a{
+    text-decoration: none;
+    color: black;
+}
+
+.dialogs{
+    width: 100%;
+    background: white;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.dialogs-box{
+    height: 92%;
+    overflow-y: auto;
+}
+.push-message{
+    height: 8%;
+    display: flex;
+}
+
+.push-message textarea{
+    width: 100%;
+    resize: none;
+    font-size: 20px;
+    border: none;
+    color: #834283;
+    padding: 5px 0 0 5px;
+    background: rgb(241, 236, 241);
+}
+
+.push-message button{
+    width: 30%;
+    border: 2px transparent solid;
+    background: #eeddee;
+    font-size: 20px;
+    color: #834283;
+    cursor: pointer;
+}
+
+.push-message button:active{
+    background: #ccbbcc;
+}
+.dialogs-box{
+    padding: 20px;
+}
+.mineMes, .friendMes{
+    display: flex;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    align-items: center;
+}

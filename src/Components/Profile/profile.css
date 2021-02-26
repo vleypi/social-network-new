@@ -1,0 +1,79 @@
+.profile{grid-area: profile}
+
+.profile{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px;
+    background-color: white;
+}
+.profile-info{
+    display: flex;
+}
+.profile-info img{
+    border: 1px black solid;
+    width: 160px;
+    border-radius: 10px;
+    flex-grow: 1;
+}
+.profile-name{
+    flex-grow: 4;
+    margin-left: 20px;
+}
+.profile-name p{
+    margin-top: 10px;
+    color: gray;
+}
+
+.new-post textarea{
+    width: 100%;
+    resize: none;
+    font-size: 20px;
+    border: none;
+    height: 100px;
+    padding: 3px 0 0 3px;
+    border-radius: 10px;
+    background: rgb(241, 236, 241);
+}
+
+.new-post button{
+    background:#eeddee;
+    font-size: 17px;
+    border: 2px transparent solid;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.new-post button:active{
+    border: 2px #a377a3 solid;
+}
+
+.new-post button:hover{
+    background: #dbc4db;
+}
+
+.posts{
+    margin-top: 30px;
+}
+.post{
+    background-color: rgb(238, 221, 238);
+    margin-top: 20px;
+    padding: 10px 20px 10px 10px;
+    border-radius: 10px;
+}
+.post img{
+    width: 50px;
+}
+.post p{
+    margin: 5px 0;
+}
+.post-name p{
+    font-weight: 600;
+    margin-left: 10px;
+}
+.post-name{
+    display: flex;
+    align-items: center;
+}

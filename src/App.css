@@ -1,0 +1,28 @@
+body{
+  margin: 0;
+  background-color: rgb(231, 231, 231);
+  color: black;
+  font-family: sans-serif;
+}
+*{
+  outline: none;
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+.App{
+  display: grid;
+  margin: 0 auto;
+  max-width: 1200px;
+  grid-template-areas: 
+  "header header"
+  "menu profile"
+  ;
+  grid-template-columns: 2fr 16fr;
+  grid-gap: 10px;
+}
+.App .profile,.header{
+  background-color: rgb(252, 252, 252);
+}

@@ -1,0 +1,32 @@
+.friendlist {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.friendlist h2{
+    color: rgb(139, 91, 170);
+}
+.friends-list{
+    margin-top: 20px;
+}
+.link-to{
+    height: 70px;
+    border-bottom: 2px rgb(139, 91, 170) solid;
+}
+.link-to a{
+    display: flex;
+    text-decoration: none;
+    border-bottom: 1px transparent solid;
+    max-width: 150px;
+}
+.link-to .profilefriend{
+    margin-top: 20px;
+    font-weight: 700;
+}
+.link-to a:nth-child(2){
+    font-size: 15px;
+    margin-top: 4px;
+}
+.link-to a:hover{
+    color: black;
+}
