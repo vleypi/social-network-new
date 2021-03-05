@@ -18,15 +18,15 @@ function App(props) {
         <Header />
         <Menu />
         <div className='content'>
-          <Route exact path="/" render={() => <Profile name="Vladimir Parfenov" status="Hello World!" postData={props.state.postData} postText={props.state.postText}/>} />
-          <Route path="/profile" render={() => <Profile name="Vladimir Parfenov" status="Hello World!" postData={props.state.postData} postText={props.state.postText}/>} />
-          <Route path="/message" render={() => <Message messageData={props.state.messageData} friendsData={props.state.friendsData}/>} />
+          <Route exact path="/" render={() => <Profile name="Vladimir Parfenov" status="Hello World!" postData={props.state.postData} postText={props.state.postText} addPost={props.store.addPost.bind(props.store)} onPostChange={props.store.onPostChange.bind(props.store)}/>} />
+          <Route path="/profile" render={() => <Profile name="Vladimir Parfenov" status="Hello World!" postData={props.state.postData} postText={props.state.postText} addPost={props.store.addPost.bind(props.store)} onPostChange={props.store.onPostChange.bind(props.store)}/>} />
+          <Route path="/message" render={() => <Message messageData={props.state.messageData} friendsData={props.state.friendsData} messageText={props.state.messageText} addMes={props.store.addMes.bind(props.store)} onMessageChange={props.store.onMessageChange.bind(props.store)}/>} />
           <Route path="/friend" render={()=> <FriendList friendsData={props.state.friendsData}/>} />
           <Route path="/users" render={() => <Users />} />
           <Route path="/news" render={() => <News />} />
           <Route path="/photo" render={() => <Photo />} />
           <Route path="/video" component={Video} />
-          <Route path="/music" render={() => <Music musicData={props.state.musicData}/>} />
+          <Route path="/music" render={() => <Music musicData={props.state.musicData} addMusic={props.store.addMusic}/>} />
         </div>
       </BrowserRouter>
       {/* https://learn-reactjs.ru/training-project/routing - про маршрутизацию

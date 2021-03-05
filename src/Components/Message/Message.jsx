@@ -3,13 +3,11 @@ import avatar from "../../img/2.png"
 import Dialogs from "./dialogs/dialogs"
 import FriendsMes from "./friendsMes/friendsMes"
 import './Message.css'
-import {addMes} from '../../state/state'
 
 function Message(props){
-    console.log(props)
     return (
         <div className="message">
-            <Dialogs messageData={props.messageData} addMes={addMes}/>
+            <Dialogs messageData={props.messageData} addMes={props.addMes} messageText={props.messageText} onMessageChange={props.onMessageChange}/>
             <FriendsMes friendsData={props.friendsData}/>
         </div>
     )

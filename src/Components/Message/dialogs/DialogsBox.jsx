@@ -1,7 +1,6 @@
 import React from 'react';
 
 function DialogsBox(props) {
-    console.log(props)
     return(
         <div className="dialogs-box">
             {props.messageData.map((m)=>(

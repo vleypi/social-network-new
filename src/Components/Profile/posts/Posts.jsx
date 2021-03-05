@@ -2,6 +2,7 @@ import React from "react"
 import Post from "./Post"
 
 function Posts(props){
+  console.log(props)
   let ref = React.createRef();
   const addPost = ()=> {
     props.addPost(ref.current.value)

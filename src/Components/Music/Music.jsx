@@ -1,11 +1,10 @@
 import React from 'react'
 import Musicpost from './Misucpost'
-import {addMusic} from '../../state/state'
 
 function Music(props) {
     let ref = React.createRef();
     const addMusics = ()=>{
-        addMusic(ref.current.value)
+        props.addMusic(ref.current.value)
     }
     return(
         <div>
